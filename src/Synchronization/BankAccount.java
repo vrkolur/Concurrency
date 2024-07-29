@@ -6,20 +6,23 @@ public class BankAccount {
 
     private String name;
 
-    private final Object lockName = new Object();
+//    private final Object lockName = new Object();
     private final Object lockBalance = new Object();
 
     public String getName() {
         return name;
     }
 
-    public  void setName(String name) {
-         synchronized (this) {
-            this.name = name;
-            System.out.println("Name changed to: "+ getName());
-        }
-//        this.name = name;
-//        System.out.println("Name changed to: "+name);
+//    public  void setName(String name) {
+//         synchronized (this) {
+//            this.name = name;
+//            System.out.println("Name changed to: "+ getName());
+//        }
+//    }
+
+    public  void setName(String name){
+        this.name = name;
+        System.out.println("Name changed to: "+ getName());
     }
 
     public BankAccount(String name, double balance) {
@@ -44,8 +47,8 @@ public class BankAccount {
             System.out.println("Amount added: " + amount +" new balance: "+balance);
             addPromotion(amount);
         }
-
     }
+
     public synchronized void withdraw(double amount){
         try {
             Thread.sleep(100);

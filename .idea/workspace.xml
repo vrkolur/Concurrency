@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80edc903-46a2-4f2f-b6d3-3db16f67a080" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/Synchronization/myThread.java" afterDir="false" />
+    <list default="true" id="80edc903-46a2-4f2f-b6d3-3db16f67a080" name="Changes" comment="join method">
+      <change afterPath="$PROJECT_DIR$/src/Deadlock/DeadlockExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Synchronization/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Synchronization/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Synchronization/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Synchronization/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +36,32 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ChachedData.executor": "Run",
+    "Application.DeadlockExample.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/vrkolur/work/Java/Concurrency/src/Main.java",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.DeadlockExample">
     <configuration name="ChachedData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChachedData" />
       <module name="Concurrency" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeadlockExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Deadlock.DeadlockExample" />
+      <module name="Concurrency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Deadlock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -68,6 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeadlockExample" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ChachedData" />
       </list>
@@ -90,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722245137957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="join method">
+      <option name="closed" value="true" />
+      <created>1722247492336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722247492336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="join method" />
+    <option name="LAST_COMMIT_MESSAGE" value="join method" />
   </component>
 </project>
