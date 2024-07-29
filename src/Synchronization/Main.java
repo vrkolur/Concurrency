@@ -31,5 +31,25 @@ public class Main {
         }
 
         System.out.println("Final Balance: "+varunAccount.getBalance());
+
+//        This is the display of the thread.join() method
+
+//    Thread thread1 = new Thread(new myThread("one"));
+//    Thread thread2 = new Thread(new myThread("two"));
+//    Thread thread3 = new Thread(new myThread("three"));
+//
+//    thread1.start();
+//    thread2.start();
+//    thread3.start();
+
+
+//        try {
+//            thread1.join();
+//            thread2.join();
+//            thread3.join();
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//    System.out.println("Hello Nigga");
     }
 }

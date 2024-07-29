@@ -6,14 +6,17 @@ public class BankAccount {
 
     private String name;
 
+    private final Object lockName = new Object();
+    private final Object lockBalance = new Object();
+
     public String getName() {
         return name;
     }
 
     public  void setName(String name) {
-         synchronized (this.name) {
+         synchronized (this) {
             this.name = name;
-            System.out.println("Name changed to: "+name);
+            System.out.println("Name changed to: "+ getName());
         }
 //        this.name = name;
 //        System.out.println("Name changed to: "+name);
@@ -31,14 +34,15 @@ public class BankAccount {
     public void deposit(double amount){
         try {
             System.out.println("Chit chatting");
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        synchronized (this) {
+        synchronized (lockBalance) {
             double originalAmount = balance;
             balance += amount;
             System.out.println("Amount added: " + amount +" new balance: "+balance);
+            addPromotion(amount);
         }
 
     }
@@ -54,6 +58,15 @@ public class BankAccount {
             System.out.println("Amount withdrawn: " + amount +" new balance: "+balance);
         }else{
             System.out.println("Insufficient funds");
+        }
+    }
+
+    private void addPromotion(double amount){
+        if(amount>=5000){
+            synchronized (lockBalance){
+                System.out.println("Hurray you are selected for extra 25 rupees");
+                balance+=25;
+            }
         }
     }
 }
